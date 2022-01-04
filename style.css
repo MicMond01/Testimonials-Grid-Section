@@ -1,0 +1,145 @@
+ /* Root Predifined Styles */
+
+ @import url(https://fonts.google.com/specimen/Barlow+Semi+Condensed);
+
+ :root {
+    --Moderateviolet: hsl(263, 55%, 52%);
+    --Verydarkgrayishblue: hsl(217, 19%, 35%);
+    --Verydarkblackishblue: hsl(219, 29%, 14%);
+    --White: hsl(0, 0%, 100%);
+    --Lightgray: hsl(0, 0%, 81%);
+    --Lightgrayishblue: hsl(210, 46%, 95%);
+ }
+
+ /* Global Reset */
+
+ * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+ }
+
+ body {
+     top: 0;
+    background-color: var(--Lightgrayishblue);
+ }
+
+ main {
+     font-family: 'Barlow Semi Condensed', sans-serif;
+     padding: 1.5rem;
+     font-size: 13px;
+     line-height: 1.5rem;
+ }
+
+ section {
+     padding: 2rem;
+     border-radius: 2rem;
+     margin-top: 2rem;
+ }
+
+ h2 {
+     padding-bottom: 1rem;
+ }
+
+ img {
+     border-radius: 50%;
+ }
+
+ .head {
+     display: flex;
+     padding-bottom: 1rem;
+     align-items: center;
+ }
+ .head p {
+     
+    padding-left: 1rem;
+ }
+ 
+ .first-grid {
+    background-color: var(--Moderateviolet);
+ }
+ .first-grid .head p,
+ h2 {
+     color: var(--Lightgrayishblue);
+ }
+ .first-grid .head span,
+ .first-grid p {
+    color: var(--Lightgray);
+}
+
+ .second-grid {
+     background-color: var(--Verydarkgrayishblue);
+ }
+ .second-grid .head p,
+ h2 {
+     color: var(--Lightgrayishblue);
+ }
+ .second-grid .head span,
+ .second-grid p {
+    color: var(--Lightgray);
+}
+
+ .third-grid {
+     background-color: var(--White);
+ }
+ .third-grid .head p,
+ .third-grid h2 {
+     color: var(--Verydarkgrayishblue);
+ }
+ .third-grid .head span,
+ .third-grid p {
+    color: var(--Verydarkgrayishblue);
+}
+
+ .fourth-grid {
+     background-color: var(--Verydarkblackishblue);
+ }
+
+ .fourth-grid .head p,
+ .fourth-grid h2 {
+     color: var(--Lightgrayishblue);
+ }
+ .fourth-grid .head span,
+ .fourth-grid p {
+    color: var(--Lightgray);
+}
+
+ .fift-grid {
+     background-color: var(--White);
+ }
+ .fift-grid .head p,
+ .fift-grid h2 {
+     color: var(--Verydarkgrayishblue);
+ }
+ .fift-grid .head span,
+ .fift-grid p {
+    color: var(--Verydarkgrayishblue);
+}
+
+/* Desktop version */
+@media (min-width: 1000px){
+    main {
+        display: grid;
+        font-size: 10px;
+        line-height: 1rem;
+        grid-template-columns: 15rem 15rem 20rem 12rem;
+        justify-content: space-evenly;
+    }
+
+    section {
+        padding: 1rem;
+    }
+    .first-grid {
+        grid-column: span 2;
+    }
+
+    .fourth-grid {
+        grid-row: 2 / span 4;
+        grid-column: 2 / span 2;
+    }
+
+    .fift-grid {
+        grid-column: 4 / 4;
+        grid-row: 1 / span 2;
+    }
+}
